@@ -1,0 +1,5 @@
+functions-framework==3.*
+numpy
+pandas
+scikit-learn
+Flask
