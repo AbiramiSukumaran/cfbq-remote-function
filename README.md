@@ -28,12 +28,19 @@ https://gcpcredits.com/codevipa**
 5. STEP 3
    Create BigQuery Dataset and Table
   a. Create Dataset named "movies" in BigQuery in the region us-central1 by running the below command in Cloud Shell Terminal:
+
 bq mk --location=us-central1 movies_pc
+
   b. Create an External Connection by clicking the ADD button on the top left corner of the BigQuery cosole
+  
   c. Click Connections to external data sources and select Connection Type as "BigLake and remote functions (cloud resource)
+  
   d. Provide the same region as the dataset (us-central1) and click CREATE DATASET
+  
   e. Copy the Service Account in the Connection Configuration page and save it somewhere for later use
+  
   f. Create a table and load data to be predicted: From the Cloud Shell Terminal, run below command:
+
 
 bq load --source_format=CSV --skip_leading_rows=1 movies_pc.movies_score_predict \
 ./movies_bq_src_predict.csv \ Id:numeric,name:string,rating:string,genre:string,year:numeric,released:string,score:string,director:string,writer:string,star:string,country:string,budget:numeric,company:string,runtime:numeric,data_cat:string
