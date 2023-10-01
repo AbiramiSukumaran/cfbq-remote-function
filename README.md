@@ -16,6 +16,7 @@ https://gcpcredits.com/codevipa**
    c. This command should upload the 4 files - main.py, requirements.txt, movies_bq_src.csv and movies_bq_src_predict.csv
 
 **2. STEP 2**
+
    Deploy Cloud Function
    a. Open Cloud Shell Terminal
    b. Run the command:
@@ -27,6 +28,7 @@ https://gcpcredits.com/codevipa**
     2. Allow unauthenticated access for now, not recommended (The recommendation is to use OAUTH2)
 
 **3. STEP 3**
+
    Create BigQuery Dataset and Table
   a. Create Dataset named "movies" in BigQuery in the region us-central1 by running the below command in Cloud Shell Terminal:
 
@@ -47,6 +49,7 @@ bq load --source_format=CSV --skip_leading_rows=1 movies_pc.movies_score_predict
 ./movies_bq_src_predict.csv \ Id:numeric,name:string,rating:string,genre:string,year:numeric,released:string,score:string,director:string,writer:string,star:string,country:string,budget:numeric,company:string,runtime:numeric,data_cat:string
 
 **4. STEP 4**
+
    Create Remote Functions
    a. Open Query Editor in BigQuery console and enter the following command to create the remote function:
 
@@ -57,6 +60,7 @@ OPTIONS (
 );
 
 **5. STEP 5**
+
    Predict
    
   a. Now that the model is created. you can use test your remote function. Run the following SQL:
