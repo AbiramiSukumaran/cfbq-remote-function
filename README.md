@@ -34,6 +34,7 @@ bq mk --location=us-central1 movies_pc
   d. Provide the same region as the dataset (us-central1) and click CREATE DATASET
   e. Copy the Service Account in the Connection Configuration page and save it somewhere for later use
   f. Create a table and load data to be predicted: From the Cloud Shell Terminal, run below command:
+
 bq load --source_format=CSV --skip_leading_rows=1 movies_pc.movies_score_predict \
 ./movies_bq_src_predict.csv \ Id:numeric,name:string,rating:string,genre:string,year:numeric,released:string,score:string,director:string,writer:string,star:string,country:string,budget:numeric,company:string,runtime:numeric,data_cat:string
 
@@ -48,6 +49,7 @@ OPTIONS (
 );
 
   b. Now that the model is created. you can use test your remote function. Run the following SQL:
+  
   SELECT name, genre, runtime, 
 `<<YOUR_PROJECT>>.movies_pc`.predict_score(concat(genre,';', runtime)) as predicted_score
 from `<<YOUR_PROJECT>>.movies_pc.movies_score_predict`;
