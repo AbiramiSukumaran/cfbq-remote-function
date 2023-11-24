@@ -4,7 +4,7 @@ A Python Cloud Function to predict the success score of a movie based on its GEN
 **#To try this demo, access developer credits from here:
 https://gcpcredits.com/codevipa**
 
-**Sign up for Innovator's Champion: [https://cloud.google.com/innovators?utm_source=cloud_sfdc&utm_medium=email&utm_campaign=FY23-1H-vipassana-innovators&utm_content=joininnovators&utm_term=-](url)**
+**Sign up for Innovators: [https://cloud.google.com/innovators?utm_source=cloud_sfdc&utm_medium=email&utm_campaign=FY23-1H-vipassana-innovators&utm_content=joininnovators&utm_term=-](url)**
 
 **1. STEP 1**
 
